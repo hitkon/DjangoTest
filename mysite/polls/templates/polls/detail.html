@@ -8,8 +8,14 @@
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id}}">
     <label for="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
     {% endfor %}
+    <label for="Another answer"><h3>Another answer</h3></label><br>
+    <input type="radio" name="choice" id="Another answer" value="-1">
+<!--    <input type="text" id="text" value="Another Answer"><br>-->
+    <textarea name="comment101"></textarea></br>
     <input type="submit" value="Vote">
 </form>
+<br>
+<a href="{% url 'polls:index' %}">To Questions</a>
 <!--<ul>-->
 <!--{% for choice in question.choice_set.all %}-->
 <!--    <li>{{ choice.choice_text }}</li>-->
